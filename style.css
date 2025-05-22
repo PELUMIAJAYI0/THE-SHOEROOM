@@ -1,0 +1,97 @@
+ :root {
+     --primary-color: #a83232;
+     --light-color: #f9f9f9;
+     --text-color: #1a1a1a;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ body {
+     background-color: var(--light-color);
+     color: var(--text-color);
+ }
+
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem 2rem;
+     background: rgba(255, 255, 255, 0.85);
+     backdrop-filter: blur(8px);
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+     transition: all 0.3s ease-in-out;
+ }
+
+ .brand-title {
+     font-size: 1.8rem;
+     font-weight: 700;
+     color: var(--primary-color);
+     letter-spacing: 1px;
+ }
+
+ .navbar-links ul {
+     list-style: none;
+     display: flex;
+     gap: 2rem;
+ }
+
+ .navbar-links li a {
+     text-decoration: none;
+     color: var(--text-color);
+     font-weight: 500;
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     transition: color 0.3s ease;
+ }
+
+ .navbar-links li a:hover {
+     color: var(--primary-color);
+ }
+
+ .toggle-button {
+     position: relative;
+     display: none;
+     flex-direction: column;
+     cursor: pointer;
+     gap: 5px;
+ }
+
+ .toggle-button .bar {
+     width: 25px;
+     height: 3px;
+     background-color: var(--text-color);
+     transition: all 0.3s ease;
+     border-radius: 10px;
+ }
+
+ @media (max-width: 768px) {
+     .toggle-button {
+         display: flex;
+     }
+
+     .navbar-links {
+         display: none;
+         width: 100%;
+     }
+
+     .navbar-links.active {
+         display: block;
+         background-color: var(--light-color);
+         padding: 1rem 0;
+     }
+
+     .navbar-links ul {
+         flex-direction: column;
+         align-items: center;
+         gap: 1rem;
+     }
+ }
