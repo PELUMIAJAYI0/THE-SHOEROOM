@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>THE SHOEROOM</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Add these before your script.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -176,6 +179,21 @@
         <button id="download-result" class="download-btn">Download Result</button>
       </div>
     </div>
+
+    <div id="share-options" class="hidden">
+  <button id="send-email" class="share-btn">
+    <i class="fas fa-envelope"></i> Send to Email
+  </button>
+  <button class="share-btn">
+    <i class="fas fa-mobile-alt"></i> Send to Phone
+  </button>
+</div>
+<div id="email-form" class="hidden">
+  <input type="email" id="email-input" placeholder="Enter your email" required>
+  <input type="tel" id="phone-input" placeholder="Phone (optional)">
+  <button id="submit-email" class="share-btn">Send</button>
+  <div id="email-status" class="status-message"></div>
+</div>
   </section>
 
   <section id="testimonials" class="testimonials-section">
@@ -200,6 +218,31 @@
           <h4 class="testimonial-name">Michael A.</h4>
           <p class="testimonial-location">Abuja, Nigeria</p>
         </div>
+
+        <div class="swiper-slide testimonial-card">
+          <img src="https://i.pravatar.cc/100?img=20" class="testimonial-img" alt="Client Photo" />
+          <p class="testimonial-quote">“I've never had so many compliments. These shoes are magic!”</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <h4 class="testimonial-name">Michael A.</h4>
+          <p class="testimonial-location">Abuja, Nigeria</p>
+        </div>
+
+        <div class="swiper-slide testimonial-card">
+          <img src="https://i.pravatar.cc/100?img=12" class="testimonial-img" alt="Client Photo" />
+          <p class="testimonial-quote">“These shoes are next-level! Unique, comfortable, and stylish.”</p>
+          <div class="testimonial-stars">★★★★☆</div>
+          <h4 class="testimonial-name">Jane Doe</h4>
+          <p class="testimonial-location">Lagos, Nigeria</p>
+        </div>
+
+        <div class="swiper-slide testimonial-card">
+          <img src="https://i.pravatar.cc/100?img=12" class="testimonial-img" alt="Client Photo" />
+          <p class="testimonial-quote">“These shoes are next-level! Unique, comfortable, and stylish.”</p>
+          <div class="testimonial-stars">★★★★☆</div>
+          <h4 class="testimonial-name">Jane Doe</h4>
+          <p class="testimonial-location">Lagos, Nigeria</p>
+        </div>
+
 
         <!-- Add more testimonial slides as needed -->
       </div>
