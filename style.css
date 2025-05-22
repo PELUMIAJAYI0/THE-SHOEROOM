@@ -445,3 +445,111 @@
     align-items: center;
   }
 }
+
+  /* AI Assistant Section */
+/* AI Assistant Section */
+.ai-shoe-assistant {
+  padding: 80px 20px;
+  background: #fff0f0;
+  color: #300000;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.assistant-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.assistant-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.assistant-desc {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.assistant-btn,
+.next-btn,
+.download-btn {
+  background-color: #b31b1b;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.assistant-btn:hover,
+.next-btn:hover,
+.download-btn:hover {
+  background-color: #8f1414;
+  transform: scale(1.05);
+}
+
+.question-box {
+  margin-top: 30px;
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.options-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.options-list button {
+  background: #fff;
+  border: 2px solid #b31b1b;
+  color: #b31b1b;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.options-list button:hover,
+.options-list button.selected {
+  background: #b31b1b;
+  color: #fff;
+}
+
+.result-box {
+  margin-top: 40px;
+  background: #ffe6e6;
+  padding: 20px;
+  border-radius: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .options-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
