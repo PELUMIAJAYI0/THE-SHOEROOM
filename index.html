@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>THE SHOEROOM</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-GG9WrJbdqnbWLRvNEOgkMHVo3oM+Dz5pNRHTB6rO5nboD9TIKSJi+PbZVqZclpgMUVu3KbtIfw5UVcIqy8Hb9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="brand-title">THE SHOEROOM</div>
-      <a href="javascript:void(0);" class="toggle-button" id="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="navbar-links" id="navbar-links">
-        <ul>
-          <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="#about"><i class="fas fa-store"></i> About</a></li>
-          <li><a href="#products"><i class="fas fa-shoe-prints"></i> Products</a></li>
-          <li><a href="#ai"><i class="fas fa-robot"></i> AI Assistant</a></li>
-          <li><a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
-          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <nav>
+    <div class="logo">THE SHOEROOM</div>
+    <div class="menu-icon" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <ul id="nav-links">
+      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#about"><i class="fas fa-store"></i> About</a></li>
+      <li><a href="#products"><i class="fas fa-shoe-prints"></i> Products</a></li>
+      <li><a href="#testimonials"><i class="fas fa-comment"></i> Testimonials</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
 
-  <script src="script.js"></script>
+  <section class="hero" id="home">
+    <video autoplay muted loop>
+      <source src="https://cdn.coverr.co/videos/coverr-lacing-up-sneakers-6356/1080p.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Our Shoes Are As Unique As You Are</h1>
+      <p>Welcome to THE SHOEROOM – where style, comfort, and individuality walk hand in hand. Step into confidence today.</p>
+      <button>Explore Collection</button>
+    </div>
+  </section>
+
+  
 </body>
 </html>
