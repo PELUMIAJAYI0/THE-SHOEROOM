@@ -95,3 +95,24 @@ function showResult() {
     doc.save("Your_Shoe_Recommendation.pdf");
   });
 }
+
+
+  const swiper = new Swiper(".testimonial-swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 30,
+      stretch: 0,
+      depth: 150,
+      modifier: 1,
+      slideShadows: true,
+    },
+    autoplay: {
+      delay: 5000, // 5 seconds
+      disableOnInteraction: false,
+    },
+  });
+

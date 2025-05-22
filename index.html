@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>THE SHOEROOM</title>
   <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -159,31 +159,68 @@
   </section>
 
   <section class="ai-shoe-assistant" id="ai-assistant">
-  <div class="assistant-container">
-    <h2 class="assistant-title">🧠 AI Shoe Suggestion Assistant</h2>
-    <p class="assistant-desc">Not sure what to buy? Let our AI help you find the perfect shoe!</p>
-    <button id="start-assistant" class="assistant-btn">Try AI Assistant</button>
+    <div class="assistant-container">
+      <h2 class="assistant-title">🧠 AI Shoe Suggestion Assistant</h2>
+      <p class="assistant-desc">Not sure what to buy? Let our AI help you find the perfect shoe!</p>
+      <button id="start-assistant" class="assistant-btn">Try AI Assistant</button>
 
-    <div id="question-box" class="question-box hidden">
-      <div id="question-text" class="question-text"></div>
-      <div id="options" class="options-list"></div>
-      <button id="next-btn" class="next-btn hidden">Next</button>
+      <div id="question-box" class="question-box hidden">
+        <div id="question-text" class="question-text"></div>
+        <div id="options" class="options-list"></div>
+        <button id="next-btn" class="next-btn hidden">Next</button>
+      </div>
+
+      <div id="result-box" class="result-box hidden">
+        <h3>Your Perfect Match</h3>
+        <p id="result-text"></p>
+        <button id="download-result" class="download-btn">Download Result</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials-section">
+    <h2 class="testimonial-title">💬 What Our Clients Say</h2>
+
+    <div class="swiper testimonial-swiper">
+      <div class="swiper-wrapper">
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="https://i.pravatar.cc/100?img=12" class="testimonial-img" alt="Client Photo" />
+          <p class="testimonial-quote">“These shoes are next-level! Unique, comfortable, and stylish.”</p>
+          <div class="testimonial-stars">★★★★☆</div>
+          <h4 class="testimonial-name">Jane Doe</h4>
+          <p class="testimonial-location">Lagos, Nigeria</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide testimonial-card">
+          <img src="https://i.pravatar.cc/100?img=20" class="testimonial-img" alt="Client Photo" />
+          <p class="testimonial-quote">“I've never had so many compliments. These shoes are magic!”</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <h4 class="testimonial-name">Michael A.</h4>
+          <p class="testimonial-location">Abuja, Nigeria</p>
+        </div>
+
+        <!-- Add more testimonial slides as needed -->
+      </div>
+
+      <!-- Navigation Arrows -->
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
     </div>
 
-    <div id="result-box" class="result-box hidden">
-      <h3>Your Perfect Match</h3>
-      <p id="result-text"></p>
-      <button id="download-result" class="download-btn">Download Result</button>
+    <!-- Add Review Button -->
+    <div class="testimonial-button-wrapper">
+      <a href="#contact" class="testimonial-button">✍️ Add Your Review</a>
     </div>
-  </div>
-</section>
+  </section>
+
 
 
 
 
   <script src="script.js"></script>
-  <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
