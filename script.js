@@ -338,45 +338,24 @@ document.getElementById("submit-email").addEventListener("click", () => {
 
 
 // Testimonial Slider
-const testimonialSwiper = new Swiper(".testimonial-swiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  loop: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 30,
-    stretch: 0,
-    depth: 150,
-    modifier: 1,
-    slideShadows: true,
-  },
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20
+  const swiper = new Swiper(".testimonial-swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 20,
+      stretch: 0,
+      depth: 150,
+      modifier: 1,
+      slideShadows: true,
     },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
     },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 40
-    }
-  }
-});
+  });
+
+
 
