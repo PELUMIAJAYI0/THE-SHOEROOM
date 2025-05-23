@@ -417,6 +417,34 @@ document.getElementById("submit-email").addEventListener("click", () => {
 
 
 
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  // Show button when scrolled down
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.opacity = "1";
+      scrollToTopBtn.style.visibility = "visible";
+    } else {
+      scrollToTopBtn.style.opacity = "0";
+      scrollToTopBtn.style.visibility = "hidden";
+    }
+  });
+
+  // Scroll to top with bounce animation
+  scrollToTopBtn.addEventListener("click", () => {
+    const scrollStep = -window.scrollY / 15;
+    const bounceScroll = setInterval(() => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(bounceScroll);
+        window.scrollBy(0, -30); // bounce
+        setTimeout(() => window.scrollBy(0, 30), 150);
+      }
+    }, 15);
+  });
+
+
 
 
 
