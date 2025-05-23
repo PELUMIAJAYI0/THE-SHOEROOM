@@ -844,3 +844,131 @@
   background-color: #a00000;
   transform: translateY(-3px);
 }
+
+.contact-section {
+  background-color: #fff;
+  color: #222;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  background-color: #f3f3f3;
+  padding: 40px;
+  border-right: 1px solid #ddd;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  color: #b31312;
+  font-size: 24px;
+}
+
+.contact-info p {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #b31312;
+  text-decoration: none;
+}
+
+.contact-form {
+  flex: 2;
+  min-width: 320px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 14px 14px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #888;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  background-color: #f9f9f9;
+  padding: 0 4px;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -10px;
+  font-size: 13px;
+  color: #b31312;
+}
+
+.submit-btn {
+  padding: 14px 24px;
+  font-size: 16px;
+  background-color: #b31312;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(179, 19, 18, 0.4);
+}
+
+.arrow {
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
