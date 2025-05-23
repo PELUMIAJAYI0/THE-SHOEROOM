@@ -1036,7 +1036,7 @@ input.error, textarea.error {
   justify-content: center;
 }
 
-.whatsapp-float {
+/* .whatsapp-float {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -1055,29 +1055,245 @@ input.error, textarea.error {
 .whatsapp-float img {
   width: 40px;
   height: 40px;
-}
+} */
 
-#scrollToTopBtn {
+/* #scrollToTopBtn {
   position: fixed;
   bottom: 90px;
   right: 25px;
   z-index: 999;
-  background-color: #a31f1f; /* muted red */
+  background-color: #a31f1f;
   color: #fff;
   border: none;
   border-radius: 50%;
-  padding: 12px 16px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#scrollToTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 #scrollToTopBtn:hover {
   transform: scale(1.15);
   background-color: #891818;
+} */
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#scrollToTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #a80000;
+  transform: scale(1.1);
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Add to style.css */
+.site-footer {
+  background-color: #222;
+  color: #fff;
+  padding: 4rem 2rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #8B0000;
+}
+
+.footer-center .footer-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.footer-tagline {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 0.8rem;
+  list-style: none;
+}
+
+.footer-links a,
+.footer-contact li {
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.footer-links i {
+  color: #8B0000;
+  font-size: 0.8rem;
+}
+
+.footer-contact i {
+  color: #8B0000;
+  width: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #8B0000;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .footer-column {
+    text-align: center;
+  }
+  
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-links a {
+    justify-content: center;
+  }
 }
 
 
