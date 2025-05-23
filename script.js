@@ -357,11 +357,65 @@ document.getElementById("submit-email").addEventListener("click", () => {
     },
   });
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    alert("Message sent successfully!");
-    event.target.reset();
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   alert("Message sent successfully!");
+  //   event.target.reset();
+  // }
+
+
+  const form = document.getElementById("contactForm");
+  const inputs = form.querySelectorAll("input, textarea");
+  const responseDiv = document.getElementById("formResponse");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    let valid = true;
+    inputs.forEach((input) => {
+      const error = input.parentElement.querySelector(".error-msg");
+      if (!input.value.trim() || (input.type === "email" && !validateEmail(input.value))) {
+        input.classList.add("error");
+        error.style.display = "block";
+        valid = false;
+      } else {
+        input.classList.remove("error");
+        error.style.display = "none";
+      }
+    });
+
+    if (!valid) return;
+
+    const formData = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      });
+
+      if (response.ok) {
+        responseDiv.innerText = "✅ Your message was sent successfully!";
+        responseDiv.style.color = "green";
+        responseDiv.style.display = "block";
+        form.reset();
+      } else {
+        responseDiv.innerText = "❌ Something went wrong. Please try again.";
+        responseDiv.style.color = "red";
+        responseDiv.style.display = "block";
+      }
+    } catch (error) {
+      responseDiv.innerText = "❌ Error sending message.";
+      responseDiv.style.color = "red";
+      responseDiv.style.display = "block";
+    }
+  });
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
+
+
 
 
 

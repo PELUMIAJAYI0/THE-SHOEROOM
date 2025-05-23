@@ -252,7 +252,7 @@
     </div>
 
     <!-- Right Contact Form -->
-    <form class="contact-form" onsubmit="handleSubmit(event)">
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvganwnd" method="POST" onsubmit="handleSubmit(event)">
       <div class="form-group">
         <input type="text" name="name" required />
         <label>Name</label>
@@ -270,7 +270,22 @@
       </button>
     </form>
   </div>
+
+  <div id="successToast" class="toast-success">
+  <span class="checkmark">✔</span> Message sent successfully!
+</div>
+
 </section>
+
+<!-- Floating WhatsApp Icon -->
+<a href="https://wa.me/234XXXXXXXXXX?text=Hi%2C%20I’m%20interested%20in%20THE%20SHOEROOM%20shoes!" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat with CEO" 
+   title="Chat with CEO">
+   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Icon" />
+</a>
+
 
 
 
